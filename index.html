@@ -4,79 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajay's Website</title>
-
     <style>
         body{
             margin:0;
             font-family:Arial,sans-serif;
-            background:#0f172a;
-            color:white;
+            background:#1046c5;
+            color:rgb(58, 54, 54);
             display:flex;
+            background-image:url('https://wallpaperaccess.com/full/15021928.jpg');
+            background-size:cover;
+            background-position:center;
+            z-index:-1;
             justify-content:center;
-            align-items:center;
             height:100vh;
+            top:0;
             text-align:center;
         }
-
+        .babe{
+            position:fixed;
+            top: 400px;
+            width:100%;
+            height:100%;
+           
+        }
         .box{
-            width:500px;
-            padding:30px;
-            border-radius:15px;
-            background:#1e293b;
-            box-shadow:0 0 20px rgba(0,0,0,.4);
+            background:rgba(0,0,0,0);
+            padding:40px;
+            border-radius:12px;
+            box-shadow:0 4px 15px rgba(0,0,0,0);
         }
-
         h1{
-            color:#38bdf8;
+            color:#bd20a5;
         }
-
-        p{
-            color:#cbd5e1;
+        .box p{
+            color:#ff0000;
         }
-
         button{
             margin-top:20px;
             padding:12px 25px;
-            border:none;
-            border-radius:8px;
-            background:#38bdf8;
+            border:3px solid #f51393;
+            border-radius:83px;
+            top:50px;
+            background:#c524a7;
             cursor:pointer;
             font-size:16px;
         }
-
         button:hover{
-            background:#0ea5e9;
+            background:#b11ce3;
+            background-image:url('https://media.tenor.com/8X0g1k5J3xIAAAAC/heart-love.gif');
         }
-    </style>
+        .babe p{
+            color:#f428e7;
+            font-size:24px;
+            text-shadow:2px 2px 4px rgba(0,0,0,0.5);
+            top:50px;
+            text-align:center;
+        }
+    </style>            
 </head>
-
 <body>
-
 <div class="box">
-
-<h1>Hello 👋</h1>
-
-<h2>I'm Ajay</h2>
-
+<h1>Hello Every one 😉</h1>
+<h2>I'm Ajay </h2>
 <p>
-This is my first website hosted using GitHub Pages.
+    i hope you like my page ☺️
 </p>
-
-<button onclick="welcome()">
-Click Me
+<button onclick="window.location.href='https://www.instagram.com/guess__me__who__i__am__/'">
+    Follow Me On Instagram
 </button>
-
+<button onclick="welcome()">
+    Or Try This
+</button>
 </div>
-
+<div class="babe">
+    <p>
+        Sorry for that,Just try this one
+    </p>
+    <button onclick="hii()">
+        Check it
+    </button>
+</div>
 <script>
-
 function welcome(){
-
-alert("Welcome to my website ❤️❤️‍🔥");
-
+alert("Kidding there's nothing to see here 😁");
+alert("i think you are an dump 😂");
 }
-
+function hii(){
+alert("Told you 🤪");
+alert("There's nothing to see here 🤭");
+}
 </script>
-
 </body>
 </html>
