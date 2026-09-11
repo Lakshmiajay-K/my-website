@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecureMailScope - Email Threat Intelligence</title>
+
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">
+            SecureMailScope
+        </div>
+
+        <div class="subtitle">
+            AI-Powered Email Threat Intelligence
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+
+            <h1>
+                Email Threat Detection & Forensic Intelligence
+            </h1>
+
+            <p>
+                Upload an email file to analyze authentication,
+                sender identity, URLs, domains, and forensic evidence.
+            </p>
+
+        </section>
+
+
+        <section class="upload-card">
+
+            <h2>
+                Analyze Email
+            </h2>
+
+            <p class="upload-description">
+                Upload an <strong>.eml</strong> email file for security analysis.
+            </p>
+
+
+            <label for="emailFile" class="file-box">
+
+                <span class="upload-icon">
+                    📧
+                </span>
+
+                <span id="fileName">
+                    Click to select an email file
+                </span>
+
+            </label>
+
+            <input
+                type="file"
+                id="emailFile"
+                accept=".eml"
+            >
+
+
+            <button
+                id="analyzeButton"
+                onclick="analyzeEmail()"
+            >
+                Analyze Email
+            </button>
+
+
+            <div
+                id="status"
+                class="status"
+            >
+            </div>
+
+        </section>
+
+
+        <section
+            id="results"
+            class="results"
+        >
+
+            <div class="result-header">
+
+                <h2>
+                    Threat Analysis
+                </h2>
+
+                <div
+                    id="classification"
+                    class="classification"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <div class="score-section">
+
+                <div class="score-label">
+                    Threat Score
+                </div>
+
+                <div class="score-wrapper">
+
+                <div
+                    id="threatScore"
+                    class="threat-score"
+                >
+                    0
+                </div>
+
+                <div class="score-unit">
+                    / 100
+                </div>
+
+            </div>
+
+            <div class="score-bar">
+
+                <div
+                    id="scoreFill"
+                    class="score-fill"
+                ></div>
+
+            </div>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <h3>
+                        Sender
+                    </h3>
+
+                    <p id="sender">
+                        --
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>
+                        Subject
+                    </h3>
+
+                    <p id="subject">
+                        --
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>
+                        Sender Domain
+                    </h3>
+
+                    <p id="senderDomain">
+                        --
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>
+                        URLs Detected
+                    </h3>
+
+                    <p id="urlCount">
+                        0
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="analysis-section">
+
+                <h3>
+                    Threat Indicators
+                </h3>
+
+                <ul id="indicators">
+                </ul>
+
+            </div>
+            <div class="analysis-section">
+                <h3>Risk Breakdown</h3>
+                <div id="riskBreakdown" class="risk-breakdown"></div>
+            </div>
+            <div class="analysis-section">
+
+                <h3>
+                    Email Authentication
+                </h3>
+
+                <div id="authenticationAnalysis">
+                </div>
+
+            </div>
+            <div class="analysis-section">
+
+                <h3>
+                    Sender Verification
+                </h3>
+
+                <div id="senderVerification">
+                </div>
+
+            </div>
+
+            <div class="analysis-section">
+
+                <h3>
+                    URL Intelligence
+                </h3>
+
+                <div id="urlAnalysis">
+                </div>
+
+            </div>
+
+
+            <div class="analysis-section">
+
+                <h3>
+                    Domain Intelligence
+                </h3>
+
+                <div id="domainAnalysis">
+            </div>
+            <div class="analysis-section">
+                <h3>Attachment Intelligence</h3>
+                <div id="attachmentAnalysis"></div>
+            </div>
+
+
+            </div>
+            <div class="analysis-section">
+                <h3>IP Intelligence</h3>
+                <div id="ipAnalysis"></div>
+            </div>
+            <!-- GeoLocation Intelligence -->
+            <div class="analysis-section">
+                <h3>🌍 GeoLocation Intelligence</h3>
+
+                <div id="geoAnalysis" class="geo-analysis">
+                    No geolocation data available.
+                </div>
+            </div>
+
+            <div class="analysis-section">
+
+                <h3>
+                    Forensic Timeline
+                </h3>
+
+                <div id="timeline">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            SIH26106 • SecureMailScope
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
