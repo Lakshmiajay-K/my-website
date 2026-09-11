@@ -1,0 +1,21 @@
+From: security@company.com
+To: victim@example.com
+Subject: Urgent Invoice
+Date: Tue, 08 Sep 2026 10:00:00 +0530
+Reply-To: attacker@example.com
+Received: from mail.example.com (192.168.1.100)
+Authentication-Results: spf=fail; dkim=fail; dmarc=fail
+Content-Type: multipart/mixed; boundary="BOUNDARY"
+
+--BOUNDARY
+Content-Type: text/plain
+
+Please find the urgent invoice attached.
+
+--BOUNDARY
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="invoice.pdf.exe"
+
+Fake attachment for security testing.
+
+--BOUNDARY--
